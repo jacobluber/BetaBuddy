@@ -7,7 +7,7 @@ Written by Anne Alsup and Kelli Fowlds through The University of Texas at Arling
 
 BetaBuddy is run through the Jupyter Notebook BetaBuddy.ipynb. Follow the steps bellow to install all necessary packages and 
 
-How to Use BetaBuddy
+How to Use BetaBuddy & Step Breakdown
 ====
 
 Our pipeline has been tested on ND2 and TIFF Beta-cell image sequences. Other cell types have not been tested on this pipeline. Your image set will need to be in the same directory as BetaBuddy.ipynb. 
@@ -22,7 +22,37 @@ You will now have two TIFF files in your current working directory.
 
 ### Cell 2
 
-A directory for the merged DAPI and calcium dye images is cre 
+A directory for the merged DAPI and calcium dye images is created. *If you do not have a DAPI channel, move your calcium dye TIF image(s) into the new CellPoseImg directory and comment out the* `./Fiji.app` *command.* The DAPI and calcium dye images are merged with an ImageJ macro and saved in the CellPoseImg directory.
+
+### Cells 3-6
+
+Configuration and parameterization of Cellpose. Cells 4 and 6 need to be run to have the widget options appear in the output section. Following the instructions before these cells is very important to run Cellpose correctly. Cell 5 will show you which channels of your image contains the calcium dye and DAPI.
+
+### Cell 7
+Test Cellpose on only one image to check on your parameters. You can always go back and adjust your parameters if the sample output looks incorrect.
+
+### Cell 8
+
+Run Cellpose on all images and save the masks in the Mask directory in CellPoseImg. This step may take around 5-15 minutes depending on the size of your image stack. 
+
+###  Cell 9
+
+The first command will merge your new mask images with your original Beta cell images with an ImageJ macro. The second command will run this merged image stack through the Fiji plugin TrackMate. 
+
+An XML titled *MaskMerged.xml* will be saved in the current directory along with the *MaskMerged.tif*. You can load this into Fiji through *Plugins -> Tracking -> Load TrackMate File* and see the calculated tracks. You can also open the *Track* tab and click on TrackIDs to see their location. 
+
+A CSV will be saved with fluorescent intensities from every cell grouped together by their TrackID over time. This CSV will be saved in the current directory as *experimentjup.csv*.
+
+*Note: The TrackIDs in the CSV files will be off by one*
+
+### Cell 10
+
+Background subtraction is performed by sampling 100 pixels outside of the ROIs created by Cellpose. These pixel intensities are saved as a CSV.
+
+### Cell 11
+
+Last step!! The R script Beta_Buddy_Stats.R is run from the terminal to conduct background subtraction, normalization, preliminary statistical analyses, and data visualization. Three plots and the final CSV file has only tracks that span the full image stack and identifies tracks in the top 20% of signal variance over all frames.
+
 
 Installation
 ====
