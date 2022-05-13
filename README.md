@@ -5,7 +5,7 @@ Your very own automated pipeline for Beta-cell calcium imaging segmentation, reg
 
 Written by Anne Alsup and Kelli Fowlds through The University of Texas at Arlington.
 
-BetaBuddy is run through the Jupyter Notebook BetaBuddy.ipynb. Follow the steps bellow to install all necessary packages and 
+BetaBuddy is run through the Jupyter Notebook BetaBuddy.ipynb. Follow the steps bellow to run the pipeline and install all necessary packages. 
 
 How to Use BetaBuddy & Step Breakdown
 ====
