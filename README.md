@@ -79,10 +79,6 @@ pip3 install ipywidgets
 jupyter nbextension enable --py widgetsnbextension
 ~~~
 
-~~~sh
-pip3 install scikit-image
-~~~
-
 ### Cellpose Dependencies 
 CUDA and Pytorch will be necessary to run Cellpose. The following command is for CUDA 11.0, but you can find the correct CUDA installation command for you [here](https://pytorch.org/get-started/locally/). 
 
@@ -104,6 +100,13 @@ Spefici OpenCV installation for Cellpose:
 pip3 install "opencv-python-headless<4.3"
 ~~~
 
+~~~sh
+pip3 install scikit-image
+~~~
+
+~~~sh
+pip3 install matplotlib
+~~~
 
 ## Bio-Format Tools Installation
 
