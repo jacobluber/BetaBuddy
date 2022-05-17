@@ -89,9 +89,7 @@ conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch
 You can pip or conda install Cellpose:
 
 ~~~sh
-conda install cellpose
-or
-pip3 install cellpose
+python -m pip install cellpose
 ~~~
 
 Spefici OpenCV installation for Cellpose:
