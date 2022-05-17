@@ -58,7 +58,7 @@ Installation
 ====
 
 ### System Requirements
-This pipeline must be run on a Linux OS preferably with GPU access and at least 16GB for image stacks. 
+This pipeline must be run on a Linux OS with GPU or CPU access and at least 16GB for image stacks. 
 
 
 ### Directory Setup
