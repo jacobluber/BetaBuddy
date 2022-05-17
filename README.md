@@ -80,19 +80,14 @@ jupyter nbextension enable --py widgetsnbextension
 ~~~
 
 ### Cellpose Dependencies 
-CUDA and Pytorch will be necessary to run Cellpose. The following command is for CUDA 11.0, but you can find the correct CUDA installation command for you [here](https://pytorch.org/get-started/locally/). 
 
-~~~sh
-conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch
-~~~
-
-You can pip or conda install Cellpose:
+Install Cellpose:
 
 ~~~sh
 python -m pip install cellpose
 ~~~
 
-Spefici OpenCV installation for Cellpose:
+Cellpose dependencies:
 
 ~~~sh
 pip3 install "opencv-python-headless<4.3"
@@ -104,6 +99,12 @@ pip3 install scikit-image
 
 ~~~sh
 pip3 install matplotlib
+~~~
+
+CUDA and Pytorch will be necessary to run Cellpose with GPU. The following command is for CUDA 11.0, but you can find the correct CUDA installation command for you [here](https://pytorch.org/get-started/locally/). 
+
+~~~sh
+conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch
 ~~~
 
 ## Bio-Format Tools Installation
