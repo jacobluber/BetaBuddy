@@ -80,7 +80,7 @@ jupyter nbextension enable --py widgetsnbextension
 ~~~
 
 ~~~sh
-pip3 install skitimage
+pip3 install scikit-image
 ~~~
 
 ### Cellpose Dependencies 
