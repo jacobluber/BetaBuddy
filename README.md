@@ -14,15 +14,18 @@ Our pipeline has been tested on ND2 and TIFF Beta-cell image sequences. Other ce
 
 ### Cell 1
 
-If you need to convert ND2 images into TIFF, change the filenames after `!./bftools/bfconvert-overwrite ./`. The first filename will call on your current ND2 image. Due to the Linux OS you cannot have any spaces in the name. The second filename is how you want to save your TIFF file. Change the names for your DAPI and calcium dye images.
+If you need to convert ND2 images into TIFF, change the filenames after `!./bftools/bfconvert-overwrite ./`. The first filename will call on your current ND2 image. The second filename is how you want to save your TIFF file. Change the names for your DAPI and calcium dye images.
 
 You will now have two TIFF files in your current working directory.
 
-*Note: You can comment out the first line if you don't have a DAPI image*
+A directory for your images that will be segmented is created or emptied if one exists. If you have images in CellPoseImg directory, save or move them.
+
+*Due to the Linux OS you cannot have any spaces in the name.*
+
 
 ### Cell 2
 
-A directory for the merged DAPI and calcium dye images is created. *If you do not have a DAPI channel, move your calcium dye TIF image(s) into the new CellPoseImg directory and comment out the* `./Fiji.app` *command.* The DAPI and calcium dye images are merged with an ImageJ macro and saved in the CellPoseImg directory.
+A directory for the merged DAPI and calcium dye images is created. Four arguements need to be customized in the terminal command to correctly run this step. This will output a scaled version of your calcium dye images and save all frames separately with the DAPI channel if the user requires one.
 
 ### Cells 3-6
 
