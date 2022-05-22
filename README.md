@@ -66,7 +66,7 @@ This pipeline must be run on a Linux OS with GPU or CPU access and at least 16GB
 
 ### Directory Setup
 
-The directory that hold your BetaBuddy.ipynb must also have the following:
+The directory that holds your BetaBuddy.ipynb must also have the following:
 * Calcium image stack and/or DAPI image stack as TIFF or ND2 file(s)
 * DAPIMerge.ijm
 * MaskMerge.ijm
