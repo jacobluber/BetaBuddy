@@ -19,8 +19,8 @@ scaleog = dir + "Scaled_Beta_Cells.tif";
 cellposeimg = dir + "CellPoseImg/DAPIMerge";
 
 open(Beta);
-run("Scale...", "x=- y=- z=1.0 width=900 height=900 depth=25 interpolation=Bilinear average process create");
-run("Properties...", "channels=1 slices=1 frames=25 pixel_width=0 pixel_height=0 voxel_depth=1.0000000");
+run("Scale...", "x=- y=- z=1.0 width=900 height=900 interpolation=Bilinear average process create");
+run("Properties...", "channels=1 slices=1 pixel_width=0 pixel_height=0 voxel_depth=1.0000000");
 saveAs("Tiff",scaleog);
 close("*");
 print("Beta Image Scaled and Saved :)");
